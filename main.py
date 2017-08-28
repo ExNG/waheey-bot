@@ -12,7 +12,7 @@ api = twitter.Api(consumer_key=config.consumer_key,
 es = "e" * random.randint(1,130)
 Status = "Wah" + es + "y!"
 if random.randint(0,1) == 1:
-    Status.capitalize()
+    Status = "Wah".upper() + es.upper() + "y!".upper()
 
 status = api.PostUpdate(Status)
 print(status.text)
