@@ -9,17 +9,10 @@ api = twitter.Api(consumer_key=config.consumer_key,
                   access_token_key=config.access_token_key,
                   access_token_secret=config.access_token_secret)
 
-Status = "Waheey!"
-fall = random.randint(0,3)
-
-if fall == 0:
-	Status = "Waheey!"
-elif fall == 1:
-	Status = "Waheey! @ectplvzm"
-elif fall == 2:
-	Status = "Waheey! @CubeDachs"
-elif fall == 3:
-	Status = "Waheey! @ExNGBLU"
+es = "e" * random.randint(1,130)
+Status = "Wah" + es + "y!"
+if random.randint(0,1) == 1:
+    Status.capitalize()
 
 status = api.PostUpdate(Status)
 print(status.text)
